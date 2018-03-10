@@ -21,21 +21,21 @@ public class InputController : MonoBehaviour
 		Leftbar.GetComponent<Rigidbody>().velocity=new Vector3(0f,0f,0f);
 		if (Input.GetKey(KeyCode.W))
         {
-			Leftbar.GetComponent<Rigidbody>().velocity=new Vector3(0f,4.5f,0f);
+			Leftbar.GetComponent<Rigidbody>().velocity=new Vector3(0f,3.5f,0f);
         }
 		else if (Input.GetKey(KeyCode.S))
         {
-			Leftbar.GetComponent<Rigidbody>().velocity=new Vector3(0f,-4.5f,0f);
+			Leftbar.GetComponent<Rigidbody>().velocity=new Vector3(0f,-3.5f,0f);
         }
 
 		Rightbar.GetComponent<Rigidbody>().velocity=new Vector3(0f,0f,0f);
 		if (Input.GetKey(KeyCode.UpArrow))
 		{
-			Rightbar.GetComponent<Rigidbody>().velocity=new Vector3(0f,4.5f,0f);
+			Rightbar.GetComponent<Rigidbody>().velocity=new Vector3(0f,3.5f,0f);
 		}
 		else if (Input.GetKey(KeyCode.DownArrow))
 		{
-			Rightbar.GetComponent<Rigidbody>().velocity=new Vector3(0f,-4.5f,0f);
+			Rightbar.GetComponent<Rigidbody>().velocity=new Vector3(0f,-3.5f,0f);
 		}
 
     }
