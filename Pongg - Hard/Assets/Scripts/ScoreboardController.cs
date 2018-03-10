@@ -31,24 +31,24 @@ public class ScoreboardController : MonoBehaviour {
 	public void PlayerLAPoint ()
 	{
 
-		playerLScore += 1;
-		playerLeftScoreText.text = playerLScore.ToString();
+		playerRScore += 1;
+		playerRightScoreText.text = playerRScore.ToString();
 
-		if (playerLScore > 10) 
+		if (playerRScore > 10) 
 		{
-			playerWinner.text = "Player 1 Wins";
+			playerWinner.text = "Player 2 Wins";
 			crash ();
 		}
 	}
 	public void PlayerRAPoint ()
 	{
 
-		playerRScore += 1;
+		playerLScore += 1;
 
-		playerRightScoreText.text = playerRScore.ToString();
-		if (playerRScore > 10) 
+		playerLeftScoreText.text = playerLScore.ToString();
+		if (playerLScore > 10) 
 		{
-			playerWinner.text = "Player 2 Wins";
+			playerWinner.text = "Player 1 Wins";
 			crash ();
 		}
 
