@@ -31,8 +31,8 @@ public class ScoreboardController : MonoBehaviour {
 	public void PlayerLAPoint ()
 	{
 
-		playerLScore += 1;
-		playerLeftScoreText.text = playerLScore.ToString();
+		playerRScore += 1;
+		playerRightScoreText.text = playerRScore.ToString();
 
 		if (playerLScore > 10) 
 		{
@@ -43,9 +43,9 @@ public class ScoreboardController : MonoBehaviour {
 	public void PlayerRAPoint ()
 	{
 
-		playerRScore += 1;
+		playerLScore += 1;
 
-		playerRightScoreText.text = playerRScore.ToString();
+		playerLeftScoreText.text = playerLScore.ToString();
 		if (playerRScore > 10) 
 		{
 			playerWinner.text = "Player 2 Wins";
