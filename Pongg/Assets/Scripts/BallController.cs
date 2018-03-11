@@ -23,6 +23,8 @@ public class BallController : MonoBehaviour {
 		{
 			transform.position = Vector3.zero;
 			rb.velocity = Vector3.zero;
+			ScoreboardController.instance.playerRScore += 1;
+			ScoreboardController.instance.playerRightScoreText.text = ScoreboardController.instance.playerRScore.ToString();
 
 			ScoreboardController.instance.PlayerLAPoint();
 			StartCoroutine (Pause ());
@@ -32,6 +34,8 @@ public class BallController : MonoBehaviour {
 		{
 			transform.position = Vector3.zero;
 			rb.velocity = Vector3.zero;
+			ScoreboardController.instance.playerLScore += 1;
+			ScoreboardController.instance.playerLeftScoreText.text = ScoreboardController.instance.playerLScore.ToString();
 
 			ScoreboardController.instance.PlayerRAPoint();
 			StartCoroutine (Pause ());

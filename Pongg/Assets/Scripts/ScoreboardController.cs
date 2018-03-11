@@ -15,6 +15,10 @@ public class ScoreboardController : MonoBehaviour {
 	public int playerLScore;
 	public int playerRScore;	
 
+	public GameObject Bar1;
+	public GameObject Bar2;
+	public GameObject Ball;
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -30,10 +34,6 @@ public class ScoreboardController : MonoBehaviour {
 
 	public void PlayerLAPoint ()
 	{
-
-		playerRScore += 1;
-		playerRightScoreText.text = playerRScore.ToString();
-
 		if (playerLScore > 10) 
 		{
 			playerWinner.text = "Player 1 Wins";
@@ -42,10 +42,6 @@ public class ScoreboardController : MonoBehaviour {
 	}
 	public void PlayerRAPoint ()
 	{
-
-		playerLScore += 1;
-
-		playerLeftScoreText.text = playerLScore.ToString();
 		if (playerRScore > 10) 
 		{
 			playerWinner.text = "Player 2 Wins";
@@ -58,8 +54,10 @@ public class ScoreboardController : MonoBehaviour {
 		
 		Destroy(InputController.intance.Leftbar);
 		Destroy(InputController.intance.Rightbar);
-		Destroy (BallController.inance);
-
+		Destroy(BallController.inance);
+		Destroy (Bar2);
+		Destroy (Bar1);
+		Destroy (Ball);
 	}
 }
 
