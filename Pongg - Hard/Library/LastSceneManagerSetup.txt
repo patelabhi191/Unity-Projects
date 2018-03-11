@@ -1,4 +1,4 @@
 sceneSetups:
-- path: F:/Unity Projects/Dell/Pongg/Assets/Pong Gameplay.unity
+- path: Assets/Pong Gameplay.unity
   isLoaded: 1
   isActive: 1
