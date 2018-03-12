@@ -15,6 +15,10 @@ public class ScoreboardController : MonoBehaviour {
 	public int playerLScore;
 	public int playerRScore;	
 
+	public GameObject Rbar;
+	public GameObject Lbar;
+	public GameObject Ball;
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -59,6 +63,9 @@ public class ScoreboardController : MonoBehaviour {
 		Destroy(InputController.intance.Leftbar);
 		Destroy(InputController.intance.Rightbar);
 		Destroy (BallController.inance);
+		Destroy(Rbar);
+		Destroy(Lbar);
+		Destroy(Ball);
 
 	}
 }

@@ -5,6 +5,8 @@ using UnityEngine;
 	public class BallController : MonoBehaviour {
 	public static BallController inance;
 
+	public GameObject Power;
+
 	Rigidbody rb;
 
 	// Use this for initialization
@@ -79,11 +81,6 @@ using UnityEngine;
 	{
 		yield return new WaitForSeconds(2f);
 		LaunchBall ();
-	}
-
-	void asd()
-	{
-		Destroy (this);
 	}
 
 	void OnCollisionEnter (Collision hit)
