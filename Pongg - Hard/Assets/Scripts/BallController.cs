@@ -6,6 +6,11 @@ using UnityEngine;
 	public static BallController inance;
 
 	public GameObject Power;
+	public GameObject BarLeft;
+	public GameObject BarRight;
+
+	int myIntt=0;
+	int myInt=0;
 
 	Rigidbody rb;
 
@@ -45,6 +50,9 @@ using UnityEngine;
 		{
 		transform.position = Vector3.zero;
 
+		myInt = 0;
+		myIntt = 0;
+
 		int xDirection = Random.Range (0, 2);
 		int yDirection = Random.Range (0, 3);
 
@@ -81,6 +89,7 @@ using UnityEngine;
 	{
 		yield return new WaitForSeconds(2f);
 		LaunchBall ();
+
 	}
 
 	void OnCollisionEnter (Collision hit)
@@ -119,9 +128,9 @@ using UnityEngine;
 		//If it was one of the bats
 		if (hit.gameObject.name == "Pong-L") 
 		{
-		//	Debug.Log("Left touched");
+			Debug.Log(myInt);
 			rb.velocity = new Vector3 (5.25f, 0f, 0f);
-
+			myInt += 1;
 
 			//Check if we hit lower half of the bat...
 			if (transform.position.y - hit.gameObject.transform.position.y < -0.33)
@@ -133,12 +142,18 @@ using UnityEngine;
 			{
 				rb.velocity = new Vector3 (3.2f, 3.2f, 0f);
 			}
+
+			if (myInt == 3) 
+			{
+				BarLeft.transform.localScale = new Vector3 (1.25f, 1.25f, 1);
+				myInt = 0;
+			}
 		}
 		if (hit.gameObject.name == "Pong-R") 
 		{
-		//	Debug.Log("Right touched");
+			Debug.Log(myIntt);
 			rb.velocity = new Vector3 (-5.25f, 0f, 0f);
-
+			myIntt += 1;
 
 			//Check if we hit lower half of the bat...
 			if (transform.position.y - hit.gameObject.transform.position.y < -0.33) 
@@ -150,8 +165,11 @@ using UnityEngine;
 			{
 				rb.velocity = new Vector3 (-3.2f, 3.2f, 0f);
 			}  
+			if (myIntt == 3) 
+			{
+				BarRight.transform.localScale = new Vector3 (1.25f, 1.25f, 1);
+				myInt = 0;
+			}
 		}
-	
-
 }
 }
