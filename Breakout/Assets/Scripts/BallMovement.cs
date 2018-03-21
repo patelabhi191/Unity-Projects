@@ -39,7 +39,7 @@ public class BallMovement : MonoBehaviour
 				Win.text = "Game Over";
 				Destroy (bar);
 				Destroy (this);
-			} else if (lives > 269) {
+			}  if (score > 269) {
 				Win.text = "Congrats!!! You won";
 				Destroy (bar);
 				Destroy (this);
@@ -49,6 +49,12 @@ public class BallMovement : MonoBehaviour
 		}
 		if(Input.GetKey(KeyCode.Keypad0))
 		{StartCoroutine (Pause ());}
+		if (Input.GetKey (KeyCode.Keypad1)) {
+			Destroy (GameObject.FindWithTag ("Bricks"));}
+		if (Input.GetKey (KeyCode.Keypad2)) {
+			score=250;}
+		
+
 	}
 
 	public void LaunchBall()
@@ -85,7 +91,6 @@ public class BallMovement : MonoBehaviour
 		if (hit.tag=="Bar") 
 		{
 			rb.velocity = new Vector2(rb.velocity.x,-rb.velocity.y);
-
 		}
 	}
 }
