@@ -6,6 +6,8 @@ public class Powerr : MonoBehaviour {
 
 	public static Powerr insaa;
 
+	public AudioSource strik;
+
 	public GameObject PowerUp;
 	public GameObject barr;
 	public GameObject barl;
@@ -24,13 +26,14 @@ public class Powerr : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-			if (ScoreboardController.instance.playerLScore > 2) 
+		if (ScoreboardController.instance.playerLScore > 2) 
 			{
 				PowerUp.transform.localScale = new Vector3 (0.18f, 0.18f, 0);
 				LaunchPowerR ();
 			}
 
-		if (ScoreboardController.instance.playerRScore > 2) {
+		if (ScoreboardController.instance.playerRScore > 2) 
+		{
 			PowerUp.transform.localScale = new Vector3 (0.18f, 0.18f, 0);
 			LaunchPowerL ();
 		}
@@ -41,14 +44,14 @@ public class Powerr : MonoBehaviour {
 	//	transform.position = Vector2.zero;
 	//	Debug.Log ("lpower called");
 		Vector3 launchDir = new Vector3 ();
-		rby.velocity= new Vector3(7.0f,-3.0f,0);
+		rby.velocity= new Vector3(3.0f,-2.0f,0);
 		//PowerUp.transform.position = new Vector3 (2f, 3f, 0f);	
 	}
 	
 	void LaunchPowerR()
 	{
 		Vector3 launchDir = new Vector3 ();
-		rby.velocity= new Vector3(-7.0f,-3.0f,0);
+		rby.velocity= new Vector3(-3.0f,-2.0f,0);
 		//PowerUp.transform.position = new Vector3 (-1f, -2f, 0f);
 	/*	timee -= Time.deltaTime;
 		if(timee<=0.0f)
@@ -95,12 +98,14 @@ public class Powerr : MonoBehaviour {
 		//		PowerUp.transform.position = new Vector3 (11.0f, 0f, 0f);
 				barl.transform.localScale += new Vector3 (0f, 0.75f, 0);
 		   		Destroy (PowerUp);
+			strik.Play ();
 		}
 
 		if (hitt.gameObject.name == "Pong-R")
 		{
 		//	Debug.Log("Bhatkanu right");
 			Destroy(PowerUp);
+			strik.Play ();
 		//		PowerUp.transform.localScale = new Vector3 (0f, 0f, 0f);
 		//	PowerUp.transform.position = new Vector3 (11.0f, 0f, 0f);
 				barr.transform.localScale += new Vector3 (0f, 0.75f, 0);

@@ -6,7 +6,7 @@ public class CameraShake : MonoBehaviour {
 
 	Vector3 originalPos;
 	float shakeDuration = 0.0f;
-	float shakeAmount = 0.7f;
+	float shakeAmount = 1.0f;
 	float decreaseFactor = 1.0f;
 	public Camera c;
 	public GameObject Ball;
@@ -34,7 +34,7 @@ public class CameraShake : MonoBehaviour {
 		}
 		if (Ball.transform.position.x>9.5f || Ball.transform.position.x<-9.5f)
 		{
-			shakeDuration = 0.2f;
+			shakeDuration = 0.5f;
 		}
 	}
 	public void setDuration(float duration)

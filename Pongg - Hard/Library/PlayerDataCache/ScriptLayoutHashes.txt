@@ -113,7 +113,7 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 7691cc522796a5cf7f9d0e7e2a546d98 Assembly-CSharp.dll:.InputController
-7a7c560453c2b491d62e778a40316cc8 Assembly-CSharp.dll:.BallController
+1aa368fc36d801db1df0c7ea0100d6db Assembly-CSharp.dll:.BallController
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.CallbackExecutor
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.Editor.Placeholder
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
@@ -142,4 +142,5 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
-b07fb927cd99bd5d89d76fb1dce11cdf Assembly-CSharp.dll:.Powerr
+a8e7a31fd9b48c516a59ac8626bfcddd Assembly-CSharp.dll:.CameraShake
+7c4d5d4eeed0a478943c0f20973ad887 Assembly-CSharp.dll:.Powerr

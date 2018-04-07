@@ -6,11 +6,17 @@ using UnityEngine;
 	public static BallController inance;
 
 	public GameObject Power;
+	public GameObject Ball;
 	public GameObject BarLeft;
 	public GameObject BarRight;
 
+	public AudioSource Strike;
+	public AudioSource End;
+
 	int myIntt=0;
 	int myInt=0;
+
+	float timeCounter=0.0f;
 
 	Rigidbody rb;
 
@@ -30,7 +36,7 @@ using UnityEngine;
 		{
 			transform.position = Vector3.zero;
 			rb.velocity = Vector3.zero;
-
+			End.Play ();
 			ScoreboardController.instance.PlayerLAPoint();
 			StartCoroutine (Pause ());
 
@@ -39,7 +45,7 @@ using UnityEngine;
 		{
 			transform.position = Vector3.zero;
 			rb.velocity = Vector3.zero;
-
+			End.Play ();
 			ScoreboardController.instance.PlayerRAPoint();
 			StartCoroutine (Pause ());
 
@@ -82,13 +88,14 @@ using UnityEngine;
 
 
 		rb.velocity=launchDirection;
-
 		}
+
 
 	IEnumerator Pause()
 	{
 		yield return new WaitForSeconds(2f);
 		LaunchBall ();
+
 
 	}
 
@@ -128,10 +135,10 @@ using UnityEngine;
 		//If it was one of the bats
 		if (hit.gameObject.name == "Pong-L") 
 		{
-			Debug.Log(myInt);
+		//	Debug.Log(myInt);
 			rb.velocity = new Vector3 (5.25f, 0f, 0f);
 			myInt += 1;
-
+			Strike.Play ();
 			//Check if we hit lower half of the bat...
 			if (transform.position.y - hit.gameObject.transform.position.y < -0.33)
 			{
@@ -151,10 +158,10 @@ using UnityEngine;
 		}
 		if (hit.gameObject.name == "Pong-R") 
 		{
-			Debug.Log(myIntt);
+		//	Debug.Log(myIntt);
 			rb.velocity = new Vector3 (-5.25f, 0f, 0f);
 			myIntt += 1;
-
+			Strike.Play ();
 			//Check if we hit lower half of the bat...
 			if (transform.position.y - hit.gameObject.transform.position.y < -0.33) 
 			{
