@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Pong Gameplay.unity
+- path: F:/Unity-Projects/Bomberman-Replica-master/Bomberman/Assets/Bomberman.unity
   isLoaded: 1
   isActive: 1
