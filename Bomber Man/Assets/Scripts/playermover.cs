@@ -26,27 +26,22 @@ public class playermover : MonoBehaviour {
         BomberBhai.GetComponent<Rigidbody2D>().velocity=new Vector3(0f,0f,0f);
         anim.SetFloat("x", xaxis);
         anim.SetFloat("y", yaxis);
-        Debug.Log(xaxis);
-        Debug.Log(yaxis);
+        
          if (Input.GetKey(KeyCode.W)||Input.GetKey(KeyCode.UpArrow))
          {
              BomberBhai.GetComponent<Rigidbody2D>().velocity=new Vector3(0f,speed,0f);
-             //anim.SetFloat("y", yaxis);
          }
          else if (Input.GetKey(KeyCode.S)||Input.GetKey(KeyCode.DownArrow))
          {
-             BomberBhai.GetComponent<Rigidbody2D>().velocity=new Vector3(0f,-speed,0f);
-             //anim.SetFloat("y", yaxis);
+             BomberBhai.GetComponent<Rigidbody2D>().velocity=new Vector3(0f,-speed,0f);           
          }
          else if (Input.GetKey(KeyCode.D)||Input.GetKey(KeyCode.RightArrow))
          {
-             BomberBhai.GetComponent<Rigidbody2D>().velocity=new Vector3(speed,0f,0f);
-            // anim.SetFloat("x", xaxis);
+             BomberBhai.GetComponent<Rigidbody2D>().velocity=new Vector3(speed,0f,0f); 
          }
          else if (Input.GetKey(KeyCode.A)||Input.GetKey(KeyCode.LeftArrow))
          {
-             BomberBhai.GetComponent<Rigidbody2D>().velocity=new Vector3(-speed,0f,0f);
-          //   anim.SetFloat("x", xaxis);
+             BomberBhai.GetComponent<Rigidbody2D>().velocity=new Vector3(-speed,0f,0f);       
          }
 
     }
