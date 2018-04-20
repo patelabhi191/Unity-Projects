@@ -5,10 +5,13 @@ using UnityEngine;
 public class playermover : MonoBehaviour {
 
 	public GameObject BomberBhai;
-    private float xaxis;
+	public GameObject Bomb;
+	public GameObject BombF;
+	private float xaxis;
     private float yaxis;
     public float speed;
 	public Animator anim;
+	public Animator ani;
 
 	// Use this for initialization
 	void Start ()
@@ -21,13 +24,18 @@ public class playermover : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-       xaxis = Input.GetAxis("Horizontal");
-        yaxis = Input.GetAxis("Vertical");
-        BomberBhai.GetComponent<Rigidbody2D>().velocity=new Vector3(0f,0f,0f);
-        anim.SetFloat("x", xaxis);
-        anim.SetFloat("y", yaxis);
-        
-         if (Input.GetKey(KeyCode.W)||Input.GetKey(KeyCode.UpArrow))
+		xaxis = Input.GetAxis ("Horizontal");
+		yaxis = Input.GetAxis ("Vertical");
+		        
+		if (Input.GetKey (KeyCode.Space))
+		{		
+			Blast ();
+		}
+	
+		BomberBhai.GetComponent<Rigidbody2D>().velocity=new Vector3(0f,0f,0f);
+		anim.SetFloat("x", xaxis);
+		anim.SetFloat("y", yaxis);
+		if (Input.GetKey(KeyCode.W)||Input.GetKey(KeyCode.UpArrow))
          {
              BomberBhai.GetComponent<Rigidbody2D>().velocity=new Vector3(0f,speed,0f);
          }
@@ -45,5 +53,19 @@ public class playermover : MonoBehaviour {
          }
 
     }
+	void Blast()
+	{
+		Instantiate (Bomb, BomberBhai.transform.position, Quaternion.Euler (0, 0, 0));
+		Vector3 loc1 = new Vector3(BomberBhai.transform.position.x+0.8f,BomberBhai.transform.position.y,0);
+		Vector3 loc2 = new Vector3(BomberBhai.transform.position.x,BomberBhai.transform.position.y+0.8f,0);
+		Vector3 loc3 = new Vector3(BomberBhai.transform.position.x-0.8f,BomberBhai.transform.position.y,0);
+		Vector3 loc4 = new Vector3(BomberBhai.transform.position.x,BomberBhai.transform.position.y-0.8f,0);
+		Instantiate (BombF, loc2 , Quaternion.Euler (0, 0, 0));
+		Instantiate (BombF, loc4 , Quaternion.Euler (0, 0, 180));
+		BombF.transform.Rotate(0,0,90);
+		Instantiate (BombF, loc1 , Quaternion.Euler (0, 0, 270));
+		Instantiate (BombF, loc3 , Quaternion.Euler (0, 0, 90));
+		BombF.transform.Rotate(0,0,270);
+	}
 		
 }
