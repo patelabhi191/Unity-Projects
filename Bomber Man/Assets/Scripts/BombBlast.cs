@@ -5,7 +5,7 @@ using UnityEngine;
 public class BombBlast : MonoBehaviour {
 	
 	public GameObject Gate;
-	private bool ad = true;
+
 	// Use this for initialization
 	void Start () {}
 	

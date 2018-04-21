@@ -67,10 +67,10 @@ public class playermover : MonoBehaviour {
 		Vector3 loc = new Vector3(Mathf.Round(BomberBhai.transform.position.x), Mathf.Round(BomberBhai.transform.position.y),0);
 		Instantiate (Bomb, loc, Quaternion.Euler (0, 0, 0));
 
-		Vector3 loc1 = new Vector3(loc.x+0.8f,loc.y,0);
-		Vector3 loc2 = new Vector3(loc.x,loc.y+0.8f,0);
-		Vector3 loc3 = new Vector3(loc.x-0.8f,loc.y,0);
-		Vector3 loc4 = new Vector3(loc.x,loc.y-0.8f,0);
+		Vector3 loc1 = new Vector3(loc.x+0.9f,loc.y,0);
+		Vector3 loc2 = new Vector3(loc.x,loc.y+0.9f,0);
+		Vector3 loc3 = new Vector3(loc.x-0.9f,loc.y,0);
+		Vector3 loc4 = new Vector3(loc.x,loc.y-0.9f,0);
 		Instantiate (BombF, loc2 , Quaternion.Euler (0, 0, 0));
 		Instantiate (BombF, loc4 , Quaternion.Euler (0, 0, 180));
 		BombF.transform.Rotate(0,0,90);
