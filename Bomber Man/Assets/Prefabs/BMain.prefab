@@ -55,7 +55,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 1000
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -119,10 +119,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BomberBhai: {fileID: 1453583954397960}
   Bomb: {fileID: 1775644632051984, guid: ad9e46b3b337d6e4792e8d7c76ca21df, type: 2}
-  BombF: {fileID: 0}
+  BombF: {fileID: 1965127658247126, guid: 50e06868e6852f2448e4b3c5b737323b, type: 2}
   speed: 4
   anim: {fileID: 0}
   ani: {fileID: 0}
+  nextFire: 1
 --- !u!212 &212901977354856482
 SpriteRenderer:
   m_ObjectHideFlags: 1
