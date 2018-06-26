@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/BomberMan.unity
+- path: F:/SpkieBuster/SpikeBuster/Assets/Main.unity
   isLoaded: 1
   isActive: 1
